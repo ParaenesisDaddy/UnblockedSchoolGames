@@ -17,32 +17,38 @@
             color: #D7263D; /* Dark red accent color */
             overflow: hidden;
         }
-        
-        /* Unique Asymmetrical Layout */
+
+        /* Background Styling with Double Red Dots */
+        .background-dot {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: #D7263D;
+            border-radius: 50%;
+            opacity: 0.2;
+            filter: blur(60px);
+        }
+        .background-dot-1 {
+            top: 15%;
+            left: 25%;
+        }
+        .background-dot-2 {
+            bottom: 15%;
+            right: 25%;
+        }
+
         .container {
-            position: relative;
-            width: 90%;
-            max-width: 550px;
+            text-align: center;
+            background-color: #2E2E30; /* Darker gray for container */
             padding: 40px;
-            background-color: #2E2E30;
-            border-left: 8px solid #D7263D; /* Dark red accent border */
-            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 16px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
             text-align: left;
             animation: fadeIn 1s ease-in-out;
-        }
-
-        /* Accent Circle for Visual Interest */
-        .accent-circle {
-            position: absolute;
-            top: -30px;
-            right: -30px;
-            width: 80px;
-            height: 80px;
-            background-color: #D7263D;
-            border-radius: 50%;
-            opacity: 0.8;
-            filter: blur(5px);
+            position: relative;
+            z-index: 2;
         }
 
         h1 {
@@ -90,13 +96,13 @@
     </style>
 </head>
 <body>
+    <!-- Background Effects with Double Red Dots -->
+    <div class="background-dot background-dot-1"></div>
+    <div class="background-dot background-dot-2"></div>
+    
     <div class="container">
-        <div class="accent-circle"></div> <!-- Accent circle for design -->
         <h1>Math Problems</h1>
-        <p>
-            Challenge yourself with a set of algebra problems to sharpen your skills. 
-            Click below to access Grims and start practicing.
-        </p>
+        <p>Challenge yourself with a set of algebra problems to sharpen your skills. Click below to access Grims and start practicing.</p>
         <!-- Button to go to the grims.html page -->
         <a href="pages/grims.html" class="nav-button">Grims</a>
     </div>
