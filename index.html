@@ -17,6 +17,31 @@
             color: #D7263D; /* Dark red text color */
             overflow: hidden;
         }
+        
+        /* Background Styling */
+        .background-effect {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: #D7263D;
+            border-radius: 50%;
+            opacity: 0.2;
+            filter: blur(80px);
+            top: 10%;
+            left: 20%;
+        }
+        .background-effect-2 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: #D7263D;
+            border-radius: 50%;
+            opacity: 0.2;
+            filter: blur(80px);
+            bottom: 10%;
+            right: 20%;
+        }
+
         .container {
             text-align: center;
             background-color: #2E2E30; /* Darker gray for container */
@@ -27,6 +52,7 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
             animation: fadeIn 1s ease-in-out;
             position: relative;
+            z-index: 2;
         }
         h1 {
             color: #D7263D;
@@ -66,11 +92,15 @@
     </style>
 </head>
 <body>
+    <!-- Background Effects -->
+    <div class="background-effect"></div>
+    <div class="background-effect-2"></div>
+    
     <div class="container">
         <h1>Math Problems</h1>
-        <p>Challenge yourself with a set of algebra problems to sharpen your skills. Click the button below to start the Algebra 1 course and test your knowledge.</p>
+        <p>Challenge yourself with a set of algebra problems to sharpen your skills. Click the button below to start with Grims and test your knowledge.</p>
         <!-- Button to go to the grims.html page -->
-        <a href="pages/grims.html" class="nav-button">Start Algebra 1</a>
+        <a href="pages/grims.html" class="nav-button">Start Grims</a>
     </div>
 </body>
 </html>
