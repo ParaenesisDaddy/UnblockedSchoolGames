@@ -5,40 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website - Main Page</title>
     <style>
+        /* Basic Theme Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f9;
+            background: linear-gradient(135deg, #74EBD5 0%, #ACB6E5 100%);
         }
         .container {
             text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
         }
         h1 {
-            color: #4CAF50;
+            color: #333;
+            margin-bottom: 20px;
         }
         .nav-button {
             display: inline-block;
             padding: 15px 25px;
             margin: 10px;
             font-size: 1.2em;
-            color: white;
+            color: #fff;
             background-color: #4CAF50;
             text-decoration: none;
             border-radius: 8px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
         .nav-button:hover {
             background-color: #45a049;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Website</h1>
+        <h1>Welcome to My Themed Website</h1>
         <!-- Button to go to the grims.html page -->
         <a href="pages/grims.html" class="nav-button">Play Game on Grims</a>
     </div>
