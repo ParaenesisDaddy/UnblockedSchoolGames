@@ -3,49 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game 1</title>
+    <title>Grims Game</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f9;
+        /* Basic styling for full screen */
+        body, html {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
         }
-        .embed-container {
-            margin: 20px auto;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #ffffff;
-            max-width: 800px;
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
         }
         iframe {
             width: 100%;
-            height: 500px;
+            height: 100%;
             border: none;
-            border-radius: 8px;
         }
-        .nav-button {
-            display: inline-block;
-            margin-top: 20px;
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #4CAF50;
+            color: white;
             padding: 10px 20px;
             font-size: 1em;
-            color: white;
-            background-color: #4CAF50;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 5px;
+            z-index: 10;
         }
-        .nav-button:hover {
+        .back-button:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h1>Game 1</h1>
-    <div class="embed-container">
+    <!-- Back button to return to the homepage -->
+    <a href="../index.html" class="back-button">Back to Main Page</a>
+    
+    <!-- Iframe container for fullscreen display -->
+    <div class="iframe-container">
         <iframe src="https://grims.pro/" allowfullscreen></iframe>
     </div>
-    <a href="../index.html" class="nav-button">Back to Main Page</a>
 </body>
 </html>
