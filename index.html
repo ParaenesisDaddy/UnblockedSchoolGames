@@ -3,103 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Enhanced Embedded Websites</title>
+    <title>My Website - Main Page</title>
     <style>
-        /* Basic Styling */
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
             background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 0;
-            margin: 0;
         }
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
-        .embed-container {
-            margin: 20px 0;
-            position: relative;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #f9f9f9;
+        h1 {
+            color: #4CAF50;
         }
-        .embed-title {
+        .nav-button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
             font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        iframe {
-            width: 100%;
-            max-width: 800px;
-            height: 500px;
-            border: none;
-            border-radius: 8px;
-        }
-        .fullscreen-btn {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            background-color: #4CAF50;
             color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-size: 0.9em;
+            background-color: #4CAF50;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
         }
-        .fullscreen-btn:hover {
+        .nav-button:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h1>My Website with Enhanced Embedded Content</h1>
     <div class="container">
-        <div class="embed-container">
-            <h2 class="embed-title">Embedded Site 2: Example Game 2</h2>
-            <iframe id="iframe2" src="https://retrobowl.app/" allowfullscreen></iframe>
-            <button class="fullscreen-btn" onclick="toggleFullscreen('iframe2')">Fullscreen</button>
-        </div>
-
-        <div class="embed-container">
-            <h2 class="embed-title">Embedded Site 3: Example Game 3</h2>
-            <iframe id="iframe3" src="https://grims.pro/" allowfullscreen></iframe>
-            <button class="fullscreen-btn" onclick="toggleFullscreen('iframe3')">Fullscreen</button>
-        </div>
-
+        <h1>Select a Game to Play</h1>
+        <a href="pages/game1.html" class="nav-button">Play Game 1</a>
+        <a href="pages/game2.html" class="nav-button">Play Game 2</a>
+        <a href="pages/game3.html" class="nav-button">Play Game 3</a>
     </div>
-
-    <script>
-        function toggleFullscreen(iframeId) {
-            const iframe = document.getElementById(iframeId);
-            if (!document.fullscreenElement) {
-                if (iframe.requestFullscreen) {
-                    iframe.requestFullscreen();
-                } else if (iframe.mozRequestFullScreen) { // Firefox
-                    iframe.mozRequestFullScreen();
-                } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                    iframe.webkitRequestFullscreen();
-                } else if (iframe.msRequestFullscreen) { // IE/Edge
-                    iframe.msRequestFullscreen();
-                }
-            } else {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                }
-            }
-        }
-    </script>
 </body>
 </html>
