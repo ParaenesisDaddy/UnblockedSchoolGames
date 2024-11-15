@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Themed Website - Main Page</title>
+    <title>Math Problems</title>
     <style>
-        /* Pinkish Red and Dark Gray Theme */
+        /* Dark Red and Dark Gray Theme */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -13,53 +13,64 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background: #1C1C1E; /* Dark gray background */
-            color: #FFC1CC; /* Light pinkish-red */
+            background-color: #1B1B1D; /* Dark gray background */
+            color: #D7263D; /* Dark red text color */
+            overflow: hidden;
         }
         .container {
             text-align: center;
-            background-color: #2C2C2E; /* Slightly lighter dark gray for contrast */
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background-color: #2E2E30; /* Darker gray for container */
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
             animation: fadeIn 1s ease-in-out;
+            position: relative;
         }
         h1 {
-            color: #FFC1CC;
+            color: #D7263D;
             margin-bottom: 20px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+            font-size: 2em;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+        p {
+            color: #D7263D;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
         .nav-button {
             display: inline-block;
-            padding: 15px 25px;
-            margin: 10px;
-            font-size: 1.2em;
-            color: #2C2C2E; /* Darker color for button text */
-            background-color: #FFC1CC; /* Pinkish-red button */
+            padding: 15px 30px;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #D7263D; /* Dark red button */
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 10px;
             transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
         }
         .nav-button:hover {
-            background-color: #FF9AAA; /* Slightly darker pinkish-red on hover */
+            background-color: #B31E30; /* Darker shade of red on hover */
             transform: translateY(-4px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
         }
         /* Fade-in Animation */
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Themed Website</h1>
+        <h1>Math Problems</h1>
+        <p>Challenge yourself with a set of algebra problems to sharpen your skills. Click the button below to start the Algebra 1 course and test your knowledge.</p>
         <!-- Button to go to the grims.html page -->
-        <a href="pages/grims.html" class="nav-button">Play Game on Grims</a>
+        <a href="pages/grims.html" class="nav-button">Start Algebra 1</a>
     </div>
 </body>
 </html>
