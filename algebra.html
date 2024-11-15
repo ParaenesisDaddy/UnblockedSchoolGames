@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Skills - Monke Unblocker</title>
+    <title>Algebra - Math Skills</title>
     <style>
         /* Fullscreen iframe styling */
         body, html {
@@ -21,6 +21,26 @@
 </head>
 <body>
     <!-- Embed Monke Unblocker in fullscreen -->
-    <iframe src="https://monkeunblocker.com/" allowfullscreen></iframe>
+    <iframe src="https://monkeunblocker.com/" allowfullscreen id="unblockerIframe"></iframe>
+
+    <script>
+        // Attempt to remove Monke Unblocker branding if accessible
+        document.getElementById("unblockerIframe").onload = function() {
+            try {
+                // Attempt to access and modify the iframe content
+                const iframeDoc = document.getElementById("unblockerIframe").contentDocument || document.getElementById("unblockerIframe").contentWindow.document;
+
+                // Look for and hide any element with text "Monke Unblocker"
+                const elements = iframeDoc.querySelectorAll("*");
+                elements.forEach(el => {
+                    if (el.textContent.includes("Monke Unblocker")) {
+                        el.style.display = "none";
+                    }
+                });
+            } catch (e) {
+                console.log("Unable to modify iframe content due to cross-origin restrictions.");
+            }
+        };
+    </script>
 </body>
 </html>
