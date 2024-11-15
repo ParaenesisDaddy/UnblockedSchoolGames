@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geometry Lounge</title>
+    <title>Chat Hub</title>
     <style>
         /* Fullscreen Dark Red and Dark Gray Theme */
         body, html {
@@ -34,9 +34,9 @@
             font-size: 1em;
             text-decoration: none;
             border-radius: 5px;
-            font-weight: bold;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            font-weight: bold;
             z-index: 10;
         }
         .back-button:hover {
@@ -47,7 +47,10 @@
     </style>
 </head>
 <body>
+    <!-- Back button to return to the homepage -->
     <a href="../index.html" class="back-button">Back</a>
-    <iframe src="https://discord.com" allowfullscreen></iframe>
+    
+    <!-- Fullscreen iframe for Element Web (Matrix) -->
+    <iframe src="https://app.element.io/" allowfullscreen></iframe>
 </body>
 </html>
